@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>Procesador SASS</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Instalación y Uso</h5>
+                        <p class="card-text">SASS se instala utilizando Node.js y el administrador de paquetes npm.
+                            Después de instalar Node.js desde Node.js
+                            , se debe ejecutar el comando npm install -g sass en la terminal para instalar SASS
+                            globalmente. Luego se crean archivos con extensión .scss y se compilan a CSS utilizando
+                            comandos como sass estilos.scss estilos.css.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Variables</h5>
+                        <p class="card-text">Las variables en SASS permiten guardar valores reutilizables como colores,
+                            tamaños o fuentes utilizando el símbolo $. Esto facilita mantener un diseño uniforme y hacer
+                            cambios rápidos en todo el proyecto, ya que al modificar una variable, el cambio se refleja
+                            automáticamente en todos los estilos donde se utiliza.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Operadores</h5>
+                        <p class="card-text">SASS permite utilizar operadores matemáticos como suma, resta,
+                            multiplicación y división para realizar cálculos directamente en los estilos. Esto es útil
+                            para ajustar tamaños, espacios o medidas de manera dinámica y hacer el código más flexible y
+                            preciso..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Cómo se escribe una regla?</h5>
+                        <p class="card-text">Las reglas en SASS se escriben de forma muy similar a CSS, utilizando
+                            selectores y propiedades dentro de llaves. La diferencia es que SASS añade funciones
+                            avanzadas que ayudan a organizar mejor el código y hacerlo más reutilizable y fácil de
+                            mantener.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Reglas anidadas</h5>
+                        <p class="card-text">Las reglas anidadas permiten colocar selectores dentro de otros selectores
+                            para representar mejor la estructura HTML. Esto hace que el código sea más limpio,
+                            organizado y sencillo de leer, especialmente en proyectos grandes con muchos estilos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Funciones</h5>
+                        <p class="card-text">Las funciones en SASS sirven para crear operaciones reutilizables que
+                            devuelven valores personalizados. Se utilizan para simplificar cálculos, reutilizar lógica y
+                            mantener el código más ordenado y eficiente en diferentes partes del diseño.
+                        <ul>
+                            <li>
+                                <h6>¿Qué es una directiva?</h6>
+                                <p>Una directiva es una instrucción especial de SASS que comienza con el símbolo @ y se
+                                    utiliza para agregar funcionalidades avanzadas al CSS, como importar archivos,
+                                    reutilizar estilos, heredar propiedades o crear funciones personalizadas.</p>
+                            </li>
+                            <li>
+                                <h6>¿Para qué sirve @import?</h6>
+                                <p>La directiva @import sirve para dividir los estilos en varios archivos y luego
+                                    unirlos en uno solo. Esto ayuda a mantener el proyecto más organizado y facilita el
+                                    mantenimiento del código en aplicaciones grandes.</p>
+                            </li>
+                            <li>
+                                <h6>¿Para qué sirve @mixin?</h6>
+                                <p>La directiva @mixin permite crear bloques de estilos reutilizables que pueden
+                                    utilizarse varias veces en el proyecto. Esto evita repetir código y facilita la
+                                    creación de diseños consistentes.</p>
+                            </li>
+                            <li>
+                                <h6>¿Para qué sirve @include?</h6>
+                                <p>La directiva @include se utiliza para aplicar o llamar un @mixin dentro de un
+                                    selector. Gracias a esto, es posible reutilizar estilos rápidamente sin necesidad de
+                                    escribir el mismo código varias veces.</p>
+                            </li>
+                            <li>
+                                <h6>¿Para qué sirve @extend?</h6>
+                                <p>La directiva @extend permite que una clase herede los estilos de otra clase
+                                    existente. Esto ayuda a reutilizar propiedades y reducir la cantidad de código
+                                    repetido dentro del proyecto.</p>
+                            </li>
+                            <li>
+                                <h6>¿Para qué sirve @function?</h6>
+                                <p>La directiva @function se utiliza para crear funciones personalizadas que retornan
+                                    valores calculados. Es útil para realizar operaciones complejas y reutilizar
+                                    cálculos dentro de los estilos.</p>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">¿Cómo usar SASS en VS Code?</h5>
+                    <p class="card-text">Para usar SASS en Visual Studio Code es necesario instalar VS Code
+                        desde Visual Studio Code
+                        y agregar extensiones como “Live Sass Compiler”. Luego se crean archivos .scss y la
+                        extensión se encarga de compilar automáticamente el código SASS a CSS mientras se
+                        trabaja en el proyecto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
