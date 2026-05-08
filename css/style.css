@@ -1,0 +1,45 @@
+body {
+  background-color: #BDFACB;
+}
+
+header {
+  padding: 20px;
+  background-color: #96D590;
+  color: #38761D;
+  text-align: center;
+}
+
+.card1 {
+  background-color: #ff96ff;
+  color: #b01574;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #333 !important;
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: #000 !important;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #333 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

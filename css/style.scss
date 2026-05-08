@@ -1,0 +1,63 @@
+//index
+$color-body: #BDFACB;
+
+body {
+    background-color: $color-body;
+}
+
+//header
+$padding-header: 20px;
+$color-header: #96D590;
+$color-text-header: #38761D;
+$text-header-align: center;
+
+header {
+    padding: $padding-header;
+    background-color: $color-header;
+    color: $color-text-header;
+    text-align: $text-header-align;
+}
+
+//Variables
+$color-fondo: #ff96ff;
+$color-texto: #b01574;
+
+.card1 {
+    background-color: $color-fondo;
+    color: $color-texto;
+}
+
+//Operadores
+
+// Navigation Styles
+$nav-bg: rgba(255, 255, 255, 0.4);
+$nav-blur: 10px;
+$nav-border: rgba(255, 255, 255, 0.2);
+
+.navbar {
+    background: $nav-bg !important;
+    backdrop-filter: blur($nav-blur);
+    -webkit-backdrop-filter: blur($nav-blur);
+    border-bottom: 1px solid $nav-border;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur($nav-blur);
+    -webkit-backdrop-filter: blur($nav-blur);
+    color: #333 !important;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    &:hover {
+        color: #000 !important;
+    }
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #333 !important;
+}
