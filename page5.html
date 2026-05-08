@@ -52,8 +52,38 @@
         </div>
     </nav>
     <main class="container my-5 pt-5">
-        <h2>Contenido en construcción</h2>
-        <p>Esta página será actualizada pronto con contenido sobre SASS.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h3>Bucle @for</h3>
+                    <p class="text-step-1">Paso 1: Pequeño y claro</p>
+                    <p class="text-step-2">Paso 2: Mediano y más oscuro</p>
+                    <p class="text-step-3">Paso 3: Grande y sólido</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h3>Bucle @each</h3>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge-red">Rojo</span>
+                        <span class="badge-green">Verde</span>
+                        <span class="badge-blue">Azul</span>
+                    </div>
+                    <p class="mt-2">Estos badges se generaron recorriendo una lista de colores en SASS.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card p-3">
+                    <h3>Bucle @while</h3>
+                    <div class="padding-10">Este div tiene 10px de padding.</div>
+                    <div class="padding-5">Este div tiene 5px de padding.</div>
+                    <p class="mt-2 text-muted">El bucle @while es útil cuando necesitas repetir algo hasta que se cumpla
+                        una condición específica.</p>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>

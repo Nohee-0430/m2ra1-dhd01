@@ -1,5 +1,10 @@
+@use "sass:map";
+@use "sass:list";
+
+
 //index
 $color-body: #BDFACB;
+
 
 body {
     background-color: $color-body;
@@ -28,8 +33,140 @@ $color-texto: #b01574;
 }
 
 //Operadores
+$letra-size: 24px;
 
-// Navigation Styles
+.card2-h6 {
+    font-size: $letra-size + 6px;
+}
+
+
+//Tipos de Datos - Listas
+$shadow-list: rgba(0, 0, 0, 0.6), 10px, 5px, dotted;
+
+.card3 {
+    background-color: white;
+    border: 3px list.nth($shadow-list, 4) list.nth($shadow-list, 1);
+    box-shadow: 0px 4px list.nth($shadow-list, 2) list.nth($shadow-list, 1);
+
+
+    h6 {
+        color: #d11212;
+        font-weight: bold;
+    }
+}
+
+
+
+// --- Page 2: Mixins & Extends ---
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-base {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box-mixin {
+    @include flex-center;
+    @extend .box-base;
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+}
+
+.box-extend {
+    @extend .box-base;
+    background-color: #fce4ec;
+    border: 2px solid #e91e63;
+}
+
+// --- Page 3: Functions ---
+@function double-size($size) {
+    @return $size * 2;
+}
+
+.text-dynamic {
+    font-size: double-size(10px); // Result: 20px
+    color: #4a148c;
+}
+
+// --- Page 4: Conditionals ---
+$theme: light; // Cambiar a dark para ver el efecto
+
+.card-conditional {
+    @if $theme ==light {
+        background-color: white;
+        color: black;
+    }
+
+    @else {
+        background-color: #333;
+        color: white;
+    }
+}
+
+// --- Page 5: Loops ---
+@for $i from 1 through 3 {
+    .text-step-#{$i} {
+        font-size: 10px * $i;
+        opacity: 0.3 * $i;
+    }
+}
+
+$colors: (
+    "red",
+    "green",
+    "blue"
+);
+
+@each $color in $colors {
+    .badge-#{$color} {
+        background-color: $color;
+        color: white;
+        padding: 5px;
+        margin: 2px;
+    }
+}
+
+$val: 10;
+@while $val > 0 {
+    .padding-#{$val} {
+        padding: #{$val}px;
+        border: 1px dashed #ccc;
+        margin-bottom: 5px;
+    }
+    $val: $val - 5; // Importante restar para evitar bucles infinitos
+}
+
+
+// --- Color Utilities for Cards ---
+.card-blue { background-color: #e3f2fd !important; border: 1px solid #bbdefb !important; }
+.card-green { background-color: #e8f5e9 !important; border: 1px solid #c8e6c9 !important; }
+.card-yellow { background-color: #fff9c4 !important; border: 1px solid #fff59d !important; }
+.card-purple { background-color: #f3e5f5 !important; border: 1px solid #e1bee7 !important; }
+.card-orange { background-color: #fff3e0 !important; border: 1px solid #ffe0b2 !important; }
+.card-red { background-color: #ffebee !important; border: 1px solid #ffcdd2 !important; }
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px !important;
+    overflow: hidden;
+    height: 100%; // Make cards in the same row equal height
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    
+    .card-title {
+        color: #38761D;
+        font-weight: bold;
+    }
+}
+
 $nav-bg: rgba(255, 255, 255, 0.95);
 $nav-blur: 10px;
 $nav-border: rgba(0, 0, 0, 0.1);
@@ -45,8 +182,9 @@ $nav-border: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-toggler {
-    border-color: rgba(0,0,0,0.2) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
     padding: 8px !important;
+
     &:focus {
         box-shadow: none !important;
     }
@@ -57,13 +195,13 @@ $nav-border: rgba(0, 0, 0, 0.1);
     background-color: #ffffff !important;
     height: 100vh !important; // Ensure full height
     visibility: visible !important;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+
     .offcanvas-header {
         border-bottom: 1px solid #eee;
         background-color: #ffffff !important;
     }
-    
+
     .offcanvas-body {
         background-color: #ffffff !important;
         padding: 20px !important;
@@ -87,7 +225,7 @@ $nav-border: rgba(0, 0, 0, 0.1);
         padding: 12px 20px !important;
         font-size: 1.1rem;
         border-bottom: 1px solid #f0f0f0;
-        
+
         &:hover {
             color: #38761D !important; // Use the green from header
             background-color: rgba(0, 0, 0, 0.02);
@@ -109,5 +247,3 @@ body {
 header {
     margin-top: 0 !important;
 }
-
-

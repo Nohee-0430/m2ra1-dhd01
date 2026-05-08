@@ -14,6 +14,142 @@ header {
   color: #b01574;
 }
 
+.card2-h6 {
+  font-size: 30px;
+}
+
+.card3 {
+  background-color: white;
+  border: 3px dotted rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+.card3 h6 {
+  color: #d11212;
+  font-weight: bold;
+}
+
+.box-base, .box-extend, .box-mixin {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.box-mixin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3f2fd;
+  border: 2px solid #2196f3;
+}
+
+.box-extend {
+  background-color: #fce4ec;
+  border: 2px solid #e91e63;
+}
+
+.text-dynamic {
+  font-size: 20px;
+  color: #4a148c;
+}
+
+.card-conditional {
+  background-color: white;
+  color: black;
+}
+
+.text-step-1 {
+  font-size: 10px;
+  opacity: 0.3;
+}
+
+.text-step-2 {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.text-step-3 {
+  font-size: 30px;
+  opacity: 0.9;
+}
+
+.badge-red {
+  background-color: "red";
+  color: white;
+  padding: 5px;
+  margin: 2px;
+}
+
+.badge-green {
+  background-color: "green";
+  color: white;
+  padding: 5px;
+  margin: 2px;
+}
+
+.badge-blue {
+  background-color: "blue";
+  color: white;
+  padding: 5px;
+  margin: 2px;
+}
+
+.padding-10 {
+  padding: 10px;
+  border: 1px dashed #ccc;
+  margin-bottom: 5px;
+}
+
+.padding-5 {
+  padding: 5px;
+  border: 1px dashed #ccc;
+  margin-bottom: 5px;
+}
+
+.card-blue {
+  background-color: #e3f2fd !important;
+  border: 1px solid #bbdefb !important;
+}
+
+.card-green {
+  background-color: #e8f5e9 !important;
+  border: 1px solid #c8e6c9 !important;
+}
+
+.card-yellow {
+  background-color: #fff9c4 !important;
+  border: 1px solid #fff59d !important;
+}
+
+.card-purple {
+  background-color: #f3e5f5 !important;
+  border: 1px solid #e1bee7 !important;
+}
+
+.card-orange {
+  background-color: #fff3e0 !important;
+  border: 1px solid #ffe0b2 !important;
+}
+
+.card-red {
+  background-color: #ffebee !important;
+  border: 1px solid #ffcdd2 !important;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px !important;
+  overflow: hidden;
+  height: 100%;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+.card .card-title {
+  color: #38761D;
+  font-weight: bold;
+}
+
 .navbar {
   background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(10px);
