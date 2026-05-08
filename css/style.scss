@@ -30,34 +30,64 @@ $color-texto: #b01574;
 //Operadores
 
 // Navigation Styles
-$nav-bg: rgba(255, 255, 255, 0.4);
+$nav-bg: rgba(255, 255, 255, 0.95);
 $nav-blur: 10px;
-$nav-border: rgba(255, 255, 255, 0.2);
+$nav-border: rgba(0, 0, 0, 0.1);
 
 .navbar {
     background: $nav-bg !important;
     backdrop-filter: blur($nav-blur);
     -webkit-backdrop-filter: blur($nav-blur);
     border-bottom: 1px solid $nav-border;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
 }
 
 .offcanvas {
-    background: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur($nav-blur);
-    -webkit-backdrop-filter: blur($nav-blur);
-    color: #333 !important;
+    background-color: #ffffff !important;
+    
+    .offcanvas-header {
+        border-bottom: 1px solid #eee;
+    }
+
+    .offcanvas-title {
+        color: #000000 !important;
+        font-weight: bold;
+    }
+
+    .btn-close {
+        filter: none !important; // Ensure close button is visible
+    }
 }
 
-.nav-link {
-    color: #333 !important;
-    font-weight: 500;
-    &:hover {
-        color: #000 !important;
+.navbar-nav {
+    .nav-link {
+        color: #000000 !important; // Force black text
+        font-weight: 600 !important;
+        padding: 12px 20px !important;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f0f0f0;
+        
+        &:hover {
+            color: #38761D !important; // Use the green from header
+            background-color: rgba(0, 0, 0, 0.02);
+        }
     }
 }
 
 .navbar-brand {
-    font-weight: bold;
-    color: #333 !important;
-}
+    font-weight: 800 !important;
+    color: #38761D !important;
+    font-size: 1.4rem;
+}
+
+// Fix overlap for fixed nav
+body {
+    padding-top: 80px !important;
+}
+
+header {
+    margin-top: 0 !important;
+}
+
+
